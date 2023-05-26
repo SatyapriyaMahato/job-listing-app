@@ -1,8 +1,8 @@
 import './App.css';
 import jobsData from './data.json';
+import React from 'react'
 
-
-function App() {
+const App = () => {
   return (
     <div className="App">
       <div className="filter div-shadow">
@@ -20,6 +20,7 @@ function App() {
       </div>
       {
         jobsData.map(job => {
+          const tags = [job.role, job.level, ...job.languages, ...job.tools];
           return (
             <div className="job div-shadow" key={job.id}>
               <div className="job-info">
@@ -45,20 +46,13 @@ function App() {
                 </div>
 
               </div>
-
+              
               <div className="job-tags">
-                {job.languages.map(language => {
+                {tags.map(tag => {
                   return (
-                    <button className="tag" key={language}>{language}</button>
+                    <button className="tag" key={tag}>{tag}</button>
                   )
                 })}
-                {job.tools.map(tool => {
-                  return (
-                    <button className="tag" key={tool} >{tool}</button>
-                  )
-                })}
-                <button className="tag" >{job.role}</button>
-                <button className="tag" >{job.level}</button>
               </div>
 
             </div>
