@@ -46,18 +46,7 @@ a:hover{
 }
 
 /* buttons */
-.btn-clear{
-    background-color: #fff;
-    color: hsl(180, 8%, 52%);
-    border: none;
-    
-}
-.btn-clear:hover{
-    color: hsl(180, 29%, 50%);
-    border-bottom: .15em solid hsl(180, 29%, 50%);
-}
-
-.tag{
+.btn{
     background-color: hsl(180, 52%, 96%);
     border: none;
     font-size: .6rem;
@@ -66,8 +55,23 @@ a:hover{
     color: hsl(180, 29%, 50%);
     font-weight: 700; 
     font-size: .8rem;
-    padding: .5em;  
+    padding: .5em;
+    border-radius: 4px;  
 }
+.clear{
+    background-color: #fff;
+    color: hsl(180, 8%, 52%);
+    border: none;
+    border-radius: 0;
+    height: 1.5em;
+    cursor: pointer;
+    
+}
+.clear:hover{
+    color: hsl(180, 29%, 50%);
+    text-decoration: underline;
+}
+
 .filter-button {
     display: flex;
     height: 2em;
@@ -79,66 +83,47 @@ a:hover{
     font-size: 1rem;
     font-weight: 500;
     color: hsl(180, 29%, 50%);
-  }
+    margin: .5em .5em;
+}
 
-  .button__text,
-  .button__icon {
+.button__text,
+.button__icon {
     display: inline-flex;
     align-items: center;
     padding: 0 0.5em;
     height: 100%;
-  }
-  
-  .button__icon {
+}
+
+.button__icon {
     font-size: 1.5em;
     background: hsl(180, 29%, 50%);
-  }
-  .button__icon:hover{
+}
+.button__icon:hover{
     background-color: black;
-  }
+}
   
-
-.new{
-    height: 2em;
+.new, .featured{
     font-size: 0.8rem;
     padding: .6em;
     margin: 0 .4em;
     background-color: hsl(180, 29%, 50%);
-    border: none;
-    border-radius: 1em;
-    color: #fff;   
-}
-.featured{
-    height: 2em;
-    font-size: 0.8rem;
-    padding: .6em;
-    margin: 0 .6em;
-    background-color: hsl(0, 0%, 0%);
-    border: none;
     border-radius: 1em;
     color: #fff;
-
 }
+
+.featured{
+    background-color: hsl(0, 0%, 0%);
+}
+
 .name{
     color: hsl(180, 29%, 50%);
     font-size: 1.2rem;
 }
+
 .container{
     max-width: 85%;
-    margin: 0 auto;;
-}
-.filter{
-    background-color:#fff;
-    position: relative;
-    z-index: 999;
-    margin-top: -20px;
-    height: 40px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2em;
-    /* display: none; */
+    margin: 0 auto;
+
 }
 
 .job{
@@ -148,29 +133,50 @@ a:hover{
     background-color: #fff;
     margin: 4em 0;
     padding: 2em 2.5em;
-}
-.div-shadow {
+    border-radius: 10px;
     box-shadow: 10px 20px 30px -15px hsl(180, 29%, 50%);
 }
+
+.filter{
+    background-color:#fff;
+    display: flex;
+    position: relative;
+    z-index: 999;
+    margin-top: -20px;
+    height: auto;
+    padding: 1em 1.5em;
+}
+.filter-tags{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 60%;
+}
+
 .job-info{
     display: flex;
     
+    
 }
+
 ul{
     display: flex;
     justify-content: space-between;
     color: hsl(180, 8%, 52%);
 }
+
 .days{
     list-style: none;
     
 }
+    
 li{
     font-size: .8rem;
 }
+
 span{
     font-size: 1rem;
 }
+
 .time, .location{
     margin-left: 1.5em;
 }
@@ -182,6 +188,7 @@ span{
     justify-content: space-between;
     margin-left: 1em;
 }
+
 .new{
     margin-left: 2em;
 }
@@ -189,11 +196,13 @@ span{
 .company-name, .job-title, .job-criteria{
     margin: 0;
 } 
+
 .company-name{
     display: flex;
     align-items: center;
     
 }
+
 .job-tags{
     display: flex;
 }
@@ -203,12 +212,15 @@ span{
     background-color: hsl(180, 29%, 50%);
 }
 
-
-
-
-
+.attribution{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .attribution a { 
     color: hsl(228, 45%, 44%);
-    font-size: 11px; text-align: center;
+    font-size: 14px; text-align: center;
 }
