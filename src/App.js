@@ -4,7 +4,6 @@ import JobCard from './components/JobCard';
 import Attributes from './components/Attributes';
 import JobsData from './data.json';
 
-
 const App = () => {
   // storinhg filtering tags
   const [filterTags, setFilterTags] = useState([]);
@@ -44,14 +43,12 @@ const App = () => {
 
         // returns filtered jobCards if there is filterTags
         return filterTags.length === 0 ? (
-          <div key={jobs.id}>
-            <JobCard
-              jobsData={jobs}
-              jobTags={jobTags}
-              clickedTags={addFilterTags}
-            />
-          </div>
 
+          <JobCard key={jobs.id}
+            jobsData={jobs}
+            jobTags={jobTags}
+            clickedTags={addFilterTags}
+          />
         ) : (
           filterJobs(jobTags, filterTags) && (
             <JobCard
